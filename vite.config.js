@@ -1,25 +1,13 @@
-// @ts-nocheck
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig(({ mode }) => {
-  const plugins = [react()]
-
-  if (mode === 'development') {
-    try {
-      const { componentTagger } = require('lovable-tagger')
-      plugins.push(componentTagger())
-    } catch (err) {
-      console.warn('lovable-tagger not available, continuing without it')
-    }
-  }
-
   return {
-    plugins,
+    plugins: [react()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@': path.resolve(process.cwd(), './src'),
       },
     },
     server: {
@@ -41,6 +29,6 @@ export default defineConfig(({ mode }) => {
     },
     optimizeDeps: {
       include: ['react', 'react-dom', 'react-router-dom'],
-    },
+    }
   }
 })
