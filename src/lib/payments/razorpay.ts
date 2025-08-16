@@ -117,7 +117,7 @@ export class RazorpayClient {
 
       // Initialize Razorpay
       const rzp = new window.Razorpay({
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        key: import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: order.amount,
         currency: order.currency,
         name: 'LMS Platform',

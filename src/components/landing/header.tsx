@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import { Menu, X, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
 
 const navigation = [
   { name: "Features", href: "#features" },
@@ -49,7 +50,8 @@ export function Header() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:gap-x-4 lg:items-center">
+          <ThemeToggle />
           <Link to="/auth/login">
             <Button variant="ghost">Sign in</Button>
           </Link>
@@ -101,6 +103,9 @@ export function Header() {
                 ))}
               </div>
               <div className="py-6 space-y-2">
+                <div className="flex items-center justify-center mb-4">
+                  <ThemeToggle />
+                </div>
                 <Link to="/auth/login" onClick={() => setMobileMenuOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start">Sign in</Button>
                 </Link>
