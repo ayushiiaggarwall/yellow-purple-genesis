@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LMS Platform - React + Vite
 
-## Getting Started
+A modern Learning Management System built with React, Vite, and TypeScript.
 
-First, run the development server:
+## ✨ Features
+
+- 🎨 **Dark/Light Mode** - Theme switching with smooth animations
+- 🔐 **Authentication** - Complete auth system with Supabase integration
+- 📱 **Responsive Design** - Works on all devices
+- ⚡ **Fast Performance** - Built with Vite for lightning-fast development
+- 🎭 **Beautiful UI** - Glassmorphism effects and smooth animations
+- 🧭 **React Router** - Client-side routing
+- 📊 **Admin Dashboard** - User management and analytics
+- 💳 **Payment Integration** - Stripe and Razorpay support
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **React Router** - Navigation
+- **Supabase** - Backend services
+- **next-themes** - Theme management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # Base UI components
+│   ├── auth/           # Authentication components
+│   ├── landing/        # Landing page sections
+│   ├── dashboard/      # Dashboard components
+│   ├── admin/          # Admin panel components
+│   └── providers/      # Context providers
+├── pages/              # Page components
+├── lib/                # Utilities and configurations
+├── hooks/              # Custom React hooks
+└── globals.css         # Global styles
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🎨 UI Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Theme Toggle** - Switch between light and dark modes
+- **Glassmorphism** - Modern glass-like UI effects  
+- **3D Animations** - Interactive hover and click effects
+- **Particle Background** - Animated particle systems
+- **Responsive Layout** - Mobile-first design approach
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔧 Configuration
 
-## Deploy on Vercel
+Environment variables are configured in `.env`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+VITE_RAZORPAY_KEY_ID=your_razorpay_key
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Deployment
+
+This project is optimized for deployment on:
+
+- **Lovable** - AI-powered development platform
+- **Vercel** - Zero-config deployment
+- **Netlify** - JAMstack deployment
+- **Any static hosting** - Works with any static host
+
+Built with ❤️ for modern web development.
