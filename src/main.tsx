@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './globals.css'
-import { Toaster } from 'sonner'
+import { Toaster } from '@/components/ui/toaster'
 import { ThemeProvider } from './components/providers/theme-provider'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     >
       <BrowserRouter>
         <App />
-        <Toaster position="top-right" />
+        <Toaster />
       </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>,
