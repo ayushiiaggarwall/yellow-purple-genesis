@@ -4,8 +4,8 @@ import { createMockClient } from './mock-client'
 
 export const createClient = () => {
   // Check if Supabase is properly configured (Vite uses import.meta.env)
-  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-  const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+  const supabaseUrl = import.meta.env?.VITE_SUPABASE_URL
+  const supabaseAnonKey = import.meta.env?.VITE_SUPABASE_ANON_KEY
   
   // If not configured, return mock client for demo
   if (!supabaseUrl || !supabaseAnonKey || supabaseUrl?.includes('placeholder')) {

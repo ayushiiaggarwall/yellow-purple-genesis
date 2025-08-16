@@ -52,7 +52,7 @@ export function UpdatePasswordForm({ onSuccess }: UpdatePasswordFormProps) {
     }
     
     checkSession()
-  }, [supabase.auth, router])
+  }, [supabase.auth, navigate])
   
   const onSubmit = async (data: UpdatePasswordInput) => {
     if (isLoading) return
